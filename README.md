@@ -20,14 +20,14 @@ In the first terminal, run the scheduler:
 
 ```
 # This runs Celery beat which triggers our desired function every 3 seconds.
-celery -A main beat --loglevel=info
+celery -A main beat --loglevel=warning
 ```
 
 In the second terminal, run the subscriber:
 
 ```
 # This runs Celery worker which actually calls our desired function
-celery -A main worker --loglevel=info
+celery -A main worker --loglevel=warning
 ```
 
 In the third terminal, run the publisher:
